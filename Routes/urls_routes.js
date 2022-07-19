@@ -2,10 +2,6 @@ const express = require("express");
 const urlModel = require("../Models/urls_models");
 const app = express();
 
-app.get("/list", (req, res) => {
-  res.send("hello list ");
-});
-
 // ...
 app.post("/post", async (request, response) => {
   //  now its supports single object and array of objects.

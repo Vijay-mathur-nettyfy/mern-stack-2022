@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const buildPath = path.join(__dirname + "/build");
-// app.use(express.static(buildPath));
+app.use(express.static(buildPath));
 
 // app.use(UrlsRouter)
 // app.use(TagsRouter)
@@ -33,8 +33,7 @@ app.use(versions.first_version + models.urls, UrlsRouter);
 app.use(versions.first_version + models.tags, TagsRouter);
 
 app.get("/*", (req, res) => {
-  res.send("hey");
-  // res.sendFile(path.join(buildPath, "/index.html"));
+  res.sendFile(path.join(buildPath, "/index.html"));
 });
 
 const { MONGODB_URI } = process.env;
