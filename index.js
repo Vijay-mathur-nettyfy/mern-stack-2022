@@ -33,7 +33,8 @@ app.use(versions.first_version + models.urls, UrlsRouter);
 app.use(versions.first_version + models.tags, TagsRouter);
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(buildPath, "/index.html"));
+  res.send("hey");
+  // res.sendFile(path.join(buildPath, "/index.html"));
 });
 
 const { MONGODB_URI } = process.env;
