@@ -10,7 +10,7 @@ const TagsRouter = require("./Routes/tags_routes");
 const UrlsRouter = require("./Routes/urls_routes");
 
 const app = express();
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT;
 console.clear();
 
 app.use(cors());
