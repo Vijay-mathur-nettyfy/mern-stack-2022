@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const buildPath = path.join(__dirname + "/build");
-app.use(express.static(buildPath));
+// app.use(express.static(buildPath));
 
 // app.use(UrlsRouter)
 // app.use(TagsRouter)
