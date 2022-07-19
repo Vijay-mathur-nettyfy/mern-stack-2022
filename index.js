@@ -32,10 +32,6 @@ const models = {
 app.use(versions.first_version + models.urls, UrlsRouter);
 app.use(versions.first_version + models.tags, TagsRouter);
 
-app.get("/list", (req, res) => {
-  res.send("hello list ");
-});
-
 app.get("/*", (req, res) => {
   res.send("hey");
   // res.sendFile(path.join(buildPath, "/index.html"));
